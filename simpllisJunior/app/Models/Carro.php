@@ -1,11 +1,15 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Carro extends Model
 {
+
+    use HasFactory;
+
     protected $fillable = ['proprietario_id', 'placa', 'modelo', 'muitas_portas', 'km_atual'];
 
     public function proprietario()
