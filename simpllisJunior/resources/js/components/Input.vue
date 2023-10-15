@@ -8,6 +8,8 @@
 
 <script>
 export default {
-    props: ['id', 'titulo', 'idHelp', 'textoAjuda']
+    props: ['id', 'idHelp',  'titulo', 'textoAjuda']
 }
+//titulo
+//mensagem passada ao usuario {{textoAjuda}}
 </script>
