@@ -18,8 +18,6 @@ class CreateRevisoesTable extends Migration
             $table->unsignedBigInteger('carro_id');
             $table->foreign('carro_id')->references('id')->on('carros');
             $table->date('data_revisao');
-            $table->string('tipo_revisao');
-            $table->text('descricao_revisao');
             // ex 230,00
             $table->decimal('custo_revisao', 10, 2);
             $table->string('oficina_responsavel');
