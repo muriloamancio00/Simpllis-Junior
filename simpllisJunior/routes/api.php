@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::prefix('v1')->middleware('jwt.auth')->group(function () {
-    Route::resource('carro', 'App\Http\Controllers\CarroController');
     Route::resource('pessoa', 'App\Http\Controllers\PessoaController');
     Route::resource('revisao', 'App\Http\Controllers\RevisaoController');
+    Route::resource('carro', 'App\Http\Controllers\CarroController');
     Route::post('me', 'App\Http\Controllers\AuthController@me');
     Route::post('logout', 'App\Http\Controllers\AuthController@logout');
 });

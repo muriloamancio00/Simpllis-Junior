@@ -24,3 +24,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/carro',function(){
     return view('app.carro');
 })->name('carro')->middleware('auth');
+

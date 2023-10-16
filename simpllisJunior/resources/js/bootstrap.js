@@ -63,11 +63,13 @@ axios.interceptors.request.use(
 //interceptar as respostas depois de retornadas
 axios.interceptors.response.use(
     response => {
+        console.log('dsdsds')
         return response
+
     },
     error => {
+console.log(error.response)
         if(error.response.status == 401 && error.response.data.message == 'Token has expired'){
-console.log('dsdsds')
             //nesse ponto qualquer requisição por meio do axios voltam a receber todas as regras do axios.interceptors.request
             axios.post('http://127.0.0.1:8000/api/refresh/')
                 .then(response => {

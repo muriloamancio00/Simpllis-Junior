@@ -55,21 +55,21 @@ export default {
     },
     computed: {
         dadosFiltrados() {
-            // Esta função filtra os dados com base nos campos especificados em this.titulos.
+
             let campos = Object.keys(this.titulos)
-            // Array que armazena os dados
             let dadosFiltrados = []
 
-            this.dados.map((item, chave) => { //chave é o indice de cada um dos elementos / objt
-                //novo obj para armazenar itemFiltrado
+            this.dados.map((item, chave) => {
+
                 let itemFiltrado = {}
-                campos.forEach(campo => { //campos a serem apresentados
-                    itemFiltrado[campo] = item[campo] //adição de indices, dentro de um indice do objeto
+                campos.forEach(campo => {
+
+                    itemFiltrado[campo] = item[campo] //utilizar a sintaxe de array para atribuir valores a objetos
                 })
                 dadosFiltrados.push(itemFiltrado)
-
             })
-            return dadosFiltrados // retornando um array de objetos
+
+            return dadosFiltrados //retorne um array de objetos
         }
     }
 }
