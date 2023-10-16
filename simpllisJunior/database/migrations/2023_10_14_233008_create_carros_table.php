@@ -18,7 +18,7 @@ class CreateCarrosTable extends Migration
             $table->unsignedBigInteger('proprietario_id');
             $table->foreign('proprietario_id')->references('id')->on('pessoas');
             $table->string('placa', 10)->unique();
-            $table->string('modelo');
+            $table->string('marca');
             $table->boolean('muitas_portas')->default(true)->nullable();
             $table->integer('km_atual');
             $table->timestamps();
