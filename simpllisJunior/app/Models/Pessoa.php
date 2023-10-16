@@ -10,10 +10,20 @@ class Pessoa extends Model
 
     use HasFactory;
 
+    protected $table = 'pessoas';
+
     protected $fillable = ['nome', 'sexo', 'data_nascimento'];
 
+    public function rules() {
+    }
+
+    public function feedback() {
+    }
+
+    //varios carros
     public function carros()
     {
-        return $this->hasMany('App\Carro', 'proprietario_id');
+        return $this->hasMany('App\Models\Carro', 'proprietario_id');
     }
+
 }
